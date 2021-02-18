@@ -18,19 +18,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $providers=['paystack','flutterwave','stripe'];
-
-        for ($i=1; $i <= 10000; $i++) {
-            $userData[] = [
-                'email'=> Str::random(10).'@gmail.com',
-                'billing_amount'=>rand(500.00, 20000.0),
-                'billing_provider'=>$providers[array_rand($providers)],
-               ];
-        }
-
-        foreach ($userData as $user) {
-            User::insert($user);
-        }
+        User::Factory(10000)->create();
     }
 
 
