@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
     {
         $providers=['paystack','flutterwave','stripe'];
 
-        for ($i=1; $i < 10001; $i++) {
+        for ($i=1; $i <= 10000; $i++) {
             $userData[] = [
                 'email'=> Str::random(10).'@gmail.com',
                 'billing_amount'=>rand(500.00, 20000.0),

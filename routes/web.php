@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bill/{provider}','BillerController@bill');
+Route::get('/bill','BillerController@bill');
 
 
